@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qkjfbaqf</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div id ="map"></div>
+
+
+    <form action="" method="" name="connectForm" id="connectForm" class="form">
+
+        <div id = "choixConnexion" >
+            <button id = "btnConnexion">Connectez vous</button>
+            <button id = "btnGuest">Jouez en tant qu'invité</button>
+            <button id = "btnCreationAcc">crée un compte</button>
+        </div>
+
+        <div id ="connectAs" class="subForm">
+            <div id = "connectGuest">
+                <h5>connexion guest</h5>
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+            </div>
+            <div id = "connectPlayer">
+                <h5>connexion mdp</h5>
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+                <input type="text" name="password" class="password" placeholder="password">
+            </div>
+            <div id = "connectCreateAcc">
+                <h5>crée un compte</h5>
+                <input type="text" name="email" class="email" placeholder="email">
+                <input type="text" name="password" class="password" placeholder="password">
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+                
+            </div>
+        </div>
+
+
+        <div id = "connectRoom" class="subForm">
+            <h5>CreateRoom</h5>
+            <div id = "connectCreateRoom"                                                                                                                                                                                                                                                                                                                                                                                                                   >
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+                <input type="number" name="nbPlayer" id="nbPlayer" name="" min="2" max="4" />
+            </div>
+
+            <div id = "connectJoinRoom" class="subForm">
+                <h5>JoinRoom</h5>
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+                <input type="text" name="idSalle" class="idSalle" placeholder="idSalle">
+            </div>
+        </div>
+
+
+
+
+    </form>
+
+    <button id="btn">send</button>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/form.js"></script>
+    
+</body>
+</html>

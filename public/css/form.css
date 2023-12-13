@@ -1,0 +1,30 @@
+#connectForm{
+    width: 80vw;
+    height: 60vh;
+    background-color: gray;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+
+}
+#choixConnexion{
+    
+    width: 100%;
+    height: 100%;
+
+
+}
+#connectForm div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.subForm{
+    background-color: red;
+    border: solid black 1px;
+    display: none;
+}
+

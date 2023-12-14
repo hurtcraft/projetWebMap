@@ -21,11 +21,17 @@
             <button id = "btnCreationAcc">crée un compte</button>
         </div>
 
+
         <div id ="connectAs" class="subForm">
             <div id = "connectGuest">
-                <h5>connexion guest</h5>
+                <h5>connexion guest </h5>
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
+                <input type="text" name="idSalle" id="idSalleConnectGuest" placeholder="idSalle">
+                
             </div>
+
+
+
             <div id = "connectPlayer">
                 <h5>connexion mdp</h5>
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
@@ -36,36 +42,44 @@
                 <input type="text" name="email" class="email" placeholder="email">
                 <input type="text" name="password" class="password" placeholder="password">
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
-                
             </div>
+
+            <!-- <button id="submitConnectAs">jouer</button> -->
+            
+            <button id="btnCreateRoom">créer</button>
+            <button id="btnJoinRoom">rejoindre</button>
         </div>
 
 
         <div id = "connectRoom" class="subForm">
-            <h5>CreateRoom</h5>
-            <div id = "connectCreateRoom"                                                                                                                                                                                                                                                                                                                                                                                                                   >
+            <div id = "connectCreateRoom">
+                <h5>CreateRoom</h5>
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
-                <input type="number" name="nbPlayer" id="nbPlayer" name="" min="2" max="4" />
+
+                <button id="submitCreateRoom">créer</button>
             </div>
 
             <div id = "connectJoinRoom" class="subForm">
                 <h5>JoinRoom</h5>
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
                 <input type="text" name="idSalle" class="idSalle" placeholder="idSalle">
-            </div>
+                
+                <button id="submitJoinRoom">Join</button>
+        </div>
+            
         </div>
 
+        
 
 
 
     </form>
 
-    <button id="btn">send</button>
 
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/form.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/form.js" type="module"></script>
     
 </body>
 </html>

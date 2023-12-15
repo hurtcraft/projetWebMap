@@ -6,6 +6,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const PORT=3000
 const Player=require("./game/player.js");
+const Utils=require("./game/utils.js");
 
 
 app.use(express.static('public'))
@@ -25,8 +26,13 @@ io.on('connection', (socket) => {
     io.emit('chatMessage', { user: socket.id, message: message });
   });
 
+  socket.on("LookingForSalleID",()=>{
+    
+    io.to(socket.id).emit("sendSalleID",Utils.getRandomSalleID());
+  
+  })
 
-
+  
 });
 
 

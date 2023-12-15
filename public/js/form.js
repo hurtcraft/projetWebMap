@@ -19,9 +19,9 @@ const btnJoinRoom=document.getElementById("btnJoinRoom");
 const connectCreateRoom=document.getElementById("connectCreateRoom")
 const connectJoinRoom=document.getElementById("connectJoinRoom");
 
-const submitConnectAs=document.getElementById("submitConnectAs");
-const submitConnectRoom=document.getElementById("submitConnectRoom");
 
+const waitingRoom=document.getElementById("waitingRoom");
+const idRoomTitle=document.getElementById("idRoomTitle");
 let pseudo=null;
 let idRoom=null;
 let RoomMaker=false;
@@ -30,29 +30,20 @@ btnGuest.addEventListener("click",(e)=>{
     e.preventDefault();
     choixConnexion.style.display="none";
     sectionGuest.style.display="flex";
-    submitConnectAs.style.display="flex";
 
+    btnCreateRoom.style.display="flex";
+    btnJoinRoom.style.display="flex";
+    console.log(btnCreateRoom)
     
 })
+
 btnCreateRoom.addEventListener("click",(e)=>{
     e.preventDefault();
-    RoomMaker=true; // test à enlever plus tard
-
-})
-
-submitConnectAs.addEventListener("click",(e)=>{
-    e.preventDefault();
-    pseudo=sectionGuest.querySelector(".pseudo");
-    if(idRoom!=null){
-        socket.emit("sendGuestInfo",pseudo.value,RoomMaker,); //true ==> créateur de la salle
-    }
-    else{
-        socket.emit("sendGuestInfo",pseudo.value,RoomMaker);
-    }
+    socket.emit("LookingForSalleID");
     
-})
-
-submitConnectRoom.addEventListener("click",(e)=>{
-    e.preventDefault();
-    socket.emit("createOrJoinRoom","create");
+    socket.on("sendSalleID",(SalleID)=>{
+        waitingRoom.style.display="flex";
+        idRoomTitle.innerText="id de la salle : "+SalleID;
+        console.log("ID Salle : "+SalleID);
+    })
 })

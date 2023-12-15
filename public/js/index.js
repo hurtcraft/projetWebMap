@@ -6,8 +6,5 @@ let btn=document.getElementById("btn");
 
 
 
-btn.addEventListener("click",()=>{
-    socket.emit("sendMsg","je receois un msg");
-})
 
 export{socket}

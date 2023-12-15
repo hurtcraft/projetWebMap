@@ -10,8 +10,12 @@ body {
   height: 0%;
 }
 
-#btn {
-  visibility: hidden;
+
+#waitingRoom{
+  width : 80vw;
+  height : 40vh;
+  background-color: red;
+  display: none;
 }
 
 @keyframes slideOutLeft {

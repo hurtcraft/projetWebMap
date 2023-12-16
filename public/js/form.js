@@ -103,8 +103,18 @@ btnJoinRoom.addEventListener("click",(e)=>{
             
     })
 
+})
+const btnLancerJeu=document.getElementById("lancerJeu");
 
-
+socket.on("roomReady",(room)=>{
     
+    btnLancerJeu.style.display="flex";
+    //form.style.display="none";
+    console.log(btnLancerJeu)
+    btnLancerJeu.addEventListener("click",(e)=>{
+        e.preventDefault();
+        
+        socket.emit("jeuLancer",room);
+    })
 
 })

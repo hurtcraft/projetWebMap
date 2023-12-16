@@ -133,4 +133,7 @@ input[name=pseudo]{
 #idSalleConnectGuest{
     display: none;
 }
+#lancerJeu{
+    display: none;
+}
 

@@ -1,20 +1,20 @@
+import { socket } from "./index.js";
+import { initMap} from "./utils.js";
 
-const map = L.map('map').setView([51.505, -0.09], 20);
-let currentMarker=null;
-// add the OpenStreetMap tiles
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-maxZoom: 19,
-attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-}).addTo(map);
+const form = document.getElementById("connectForm");
+const maps=document.getElementById("maps");
 
-// show the scale bar on the lower left corner
-L.control.scale({imperial: true, metric: true}).addTo(map);
-console.log("char");
-map.addEventListener("click",(e)=>{
-    //currentMarker?null:null:
-    if(currentMarker!==null){
-        map.removeLayer(currentMarker);
-    }
-    currentMarker= new L.marker([e.latlng.lat,e.latlng.lng]).addTo(map);
-    console.log(currentMarker.getLatLng());
-})
+socket.on("sendVille", (villeDataAllie,villeDataEnnemie) => {
+  let villeAllie = villeDataAllie.ville;
+  let coordAllie = villeDataAllie.coord;
+
+  let villeEnnemie = villeDataEnnemie.ville;
+  let coordEnnemie = villeDataEnnemie.coord;
+  //console.log(ville + " " + coord);
+  form.style.display = "none";
+  maps.style.display="flex";
+  
+  initMap("mapAllie",coordAllie.lat,coordAllie.long);
+  initMap("mapAllie",coordEnnemie.lat,coordEnnemie.long);
+
+});

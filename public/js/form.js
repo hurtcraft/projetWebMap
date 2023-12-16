@@ -36,6 +36,7 @@ let RoomMaker=false;
 
 btnGuest.addEventListener("click",(e)=>{
     e.preventDefault();
+    sectionUtilisateur.style.display = "none";
     choixConnexion.style.display="none";
     sectionGuest.style.display="flex";
 

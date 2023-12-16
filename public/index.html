@@ -11,43 +11,41 @@
 </head>
 <body>
     <div id ="map"></div>
-
+    
 
     <form action="" method="" name="connectForm" id="connectForm" class="form">
-
-        <div id = "choixConnexion" >
-            <button id = "btnConnexion">Connectez vous</button>
-            <button id = "btnGuest">Jouez en tant qu'invité</button>
-            <button id = "btnCreationAcc">crée un compte</button>
-        </div>
+        <h1 id="titre">Nom du jeu</h1>
+        
 
 
         <div id ="connectAs" class="subForm">
+            
             <div id = "connectGuest">
-                <h5>connexion guest </h5>
-                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo" required="required">
+                <input type="text" name="pseudo" class="pseudo" placeholder="Pseudo" required="required">
                 <input type="text" name="idSalle" id="idSalleConnectGuest" placeholder="idSalle" required="required">
                 
             </div>
 
 
-
             <div id = "connectPlayer">
-                <h5>connexion mdp</h5>
-                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
-                <input type="text" name="password" class="password" placeholder="password">
+                <input type="text" name="pseudo" class="pseudo" placeholder="Pseudo"> <br>
+                <input type="text" name="password" class="password" placeholder="Mot de Passe">
+            </div>
+            <div id = "choixConnexion" >
+                <button id = "btnConnexion">Connexion</button> <br>
+                <button id = "btnGuest">Jouer en tant qu'invité</button>
+                <button id = "btnCreationAcc">Inscrivez vous</button>
             </div>
             <div id = "connectCreateAcc">
-                <h5>crée un compte</h5>
-                <input type="text" name="email" class="email" placeholder="email">
-                <input type="text" name="password" class="password" placeholder="password">
+                <input type="text" name="email" class="email" placeholder="Email">
+                <input type="text" name="password" class="password" placeholder="Mot de Passe">
                 <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
             </div>
 
             <!-- <button id="submitConnectAs">jouer</button> -->
             
-            <button id="btnCreateRoom" type="submit">créer une salle</button>
-            <button id="btnJoinRoom" type="submit">rejoindre une salle</button>
+            <button id="btnCreateRoom" type="submit">Créer une salle</button>
+            <button id="btnJoinRoom" type="submit">Rejoindre une salle</button>
         </div>
 
         <!-- ignorer cette partie pour le front pour l'instant  elle me sert de repere ==> julien-->

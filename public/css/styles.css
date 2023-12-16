@@ -16,6 +16,15 @@ body {
   height : 40vh;
   background-color: red;
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#waitingRoomPlayer1 ,#waitingRoomPlayer2{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    border: solid black 1px;
 }
 
 @keyframes slideOutLeft {

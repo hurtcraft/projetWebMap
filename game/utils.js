@@ -7,5 +7,10 @@ function getRandomSalleID() {
     }
     return result;
 }
+function createRoom(id_){
+  return {id:id_,players:[]}
+}
 
-module.exports={getRandomSalleID}
+
+
+module.exports={getRandomSalleID,createRoom}

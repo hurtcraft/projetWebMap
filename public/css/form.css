@@ -33,6 +33,6 @@
 
 
 #idSalleConnectGuest{
-    visibility: hidden;
-
+    display: none;
 }
+

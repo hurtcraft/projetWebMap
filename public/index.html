@@ -25,8 +25,8 @@
         <div id ="connectAs" class="subForm">
             <div id = "connectGuest">
                 <h5>connexion guest </h5>
-                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
-                <input type="text" name="idSalle" id="idSalleConnectGuest" placeholder="idSalle">
+                <input type="text" name="pseudo" class="pseudo" placeholder="pseudo" required="required">
+                <input type="text" name="idSalle" id="idSalleConnectGuest" placeholder="idSalle" required="required">
                 
             </div>
 
@@ -46,11 +46,11 @@
 
             <!-- <button id="submitConnectAs">jouer</button> -->
             
-            <button id="btnCreateRoom">créer</button>
-            <button id="btnJoinRoom">rejoindre</button>
+            <button id="btnCreateRoom" type="submit">créer une salle</button>
+            <button id="btnJoinRoom" type="submit">rejoindre une salle</button>
         </div>
 
-
+        <!-- ignorer cette partie pour le front pour l'instant  elle me sert de repere ==> julien-->
         <div id = "connectRoom" class="subForm">
             <div id = "connectCreateRoom">
                 <h5>CreateRoom</h5>
@@ -70,7 +70,16 @@
         </div>
 
         <div id="waitingRoom">
+            <h1>en attente des joueurs</h1>
             <h2 id="idRoomTitle"></h2>
+
+            <div id="waitingRoomPlayer1">
+                <h2 id = "waitingRoomPseudoPlayer1"></h2>
+            </div>
+
+            <div id="waitingRoomPlayer2">
+                <h2 id = "waitingRoomPseudoPlayer2"></h2>
+            </div>
         </div>
         
 

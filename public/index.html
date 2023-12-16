@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
-    <div id ="map"></div>
+    <div id = "maps">
+        <div id ="mapAllie">mapAllier</div>
+        <div id ="mapEnnemie">mapEnnemie</div>
+    </div>
 
 
     <form action="" method="" name="connectForm" id="connectForm" class="form">
@@ -49,7 +52,7 @@
             <button id="btnCreateRoom" type="submit">créer une salle</button>
             <button id="btnJoinRoom" type="submit">rejoindre une salle</button>
         </div>
-
+        
         <!-- ignorer cette partie pour le front pour l'instant  elle me sert de repere ==> julien-->
         <div id = "connectRoom" class="subForm">
             <div id = "connectCreateRoom">
@@ -82,9 +85,7 @@
             </div>
         </div>
         
-
-
-
+        <button id = "lancerJeu">lancer jeu</button>
     </form>
 
 
@@ -92,6 +93,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/index.js" type="module"></script>
     <script src="js/form.js" type="module"></script>
+    <script src="js/map.js" type="module"></script>
     
 </body>
 </html>

@@ -81,6 +81,7 @@ btnJoinRoom.addEventListener("click",(e)=>{
     e.preventDefault();
     idSalleConnectGuest.style.display="flex";
     idRoom=idSalleConnectGuest.value;
+    btnCreateRoom.style.display="none";
     console.log(idRoom.length)
     if(idRoom=="" || idRoom.length!=8){
         console.log("numero de salle incorrect");

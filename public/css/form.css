@@ -52,13 +52,14 @@
 }
 
 button{
-    border-radius: 2px ;
+    border-radius: 20px ;
     width: 20vh;
     margin-top: 2%;
-    padding: 2%;
+    padding: 2.3%;
     margin-top : 2%;
     border: none;
     justify-content: center;
+
 }
 
 #btnConnexion{
@@ -68,31 +69,33 @@ button{
 #connectGuest{
     border: 1px solid black;
     justify-content: center;
-    width: 100%;
-    
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
 }
 
 #connectGuest input{
-    width: 20vw;
+    width: auto;
+    margin: 0 0 10px 0;
 }
-#connectGuest{
-    justify-content: center;
-    
-}
+
 #connectAs{
     border: 1px solid black;
     justify-content: center;
 }
 
 button:hover{
-    transition: 0.5s;
-    background-color: RED;
+    transition: 0.25s;
+    background-color: #32866f;
+    color: white;
+    transform: scale(1.1);
 }
 
 input{
-    border-radius: 2px ;
+    border-radius:2px ;
     padding: 3%;
-    border: gray;
+    border:none;
+ 
 }
 input[name=pseudo]{
     
@@ -105,7 +108,9 @@ input[name=pseudo]{
 #btnCreateRoom, #btnJoinRoom{
     margin: 5% auto;
 }
-
+#btnGuest,#btnCreationAcc{
+    margin:0 2.5%
+}
 
 
 

@@ -16,6 +16,8 @@ console.log(Utils.getRandomVille());
 
 const AllPlayers=[];
 const AllRoom=[];
+
+
 io.on('connection', (socket) => {
   console.log('a user connected '+socket.id);
   

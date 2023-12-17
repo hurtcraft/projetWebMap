@@ -1,0 +1,28 @@
+#maps{
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  
+}
+#divMapAllier,#divMapEnnemie{
+    flex-grow: 0.9;
+    border: 2px solid #000;
+}
+#mapAllie,#mapEnnemie {
+  /* configure the size of the map */
+  width: 100%;
+  height: 80%;
+  border: 1px solid #000;
+}
+
+#imgCasernes{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+#imgCasernes img{
+    width: 200px;
+    height: auto;
+}

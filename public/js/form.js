@@ -110,7 +110,7 @@ socket.on("roomReady",(room)=>{
     
     btnLancerJeu.style.display="flex";
     //form.style.display="none";
-    console.log(btnLancerJeu)
+    
     btnLancerJeu.addEventListener("click",(e)=>{
         e.preventDefault();
         

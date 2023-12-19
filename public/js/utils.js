@@ -6,6 +6,7 @@ function createPlayer(socketID_, pseudo_, RoomMaker_, idRoom_) {
     idRoom: idRoom_,
   };
 }
+const waitingRoomPlayer2=document.getElementById("waitingRoomPlayer2");
 function updateWaitingRoom(pseudo1, pseudo2, Room) {
   let players = Room.players;
   if (players.length == 1) {
@@ -15,9 +16,11 @@ function updateWaitingRoom(pseudo1, pseudo2, Room) {
   if (p2 === undefined) {
     pseudo1.innerText = p1.pseudo;
     pseudo2.innerText = "";
+    waitingRoomPlayer2.style.visibility="hidden";
   } else {
     pseudo1.innerText = p1.pseudo;
     pseudo2.innerText = p2.pseudo;
+    waitingRoomPlayer2.style.visibility="visible";
   }
 }
 

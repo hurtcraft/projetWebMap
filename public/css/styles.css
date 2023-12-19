@@ -9,19 +9,22 @@ body {
 
 
 #waitingRoom{
-  width : 80vw;
-  height : 40vh;
-  background-color: red;
+  width : 40vw;
+  height : 50vh;
+  border-radius: 5px;
+  background-color: rgb(32, 136, 96);
+  border:1px solid #FFF;
   display: none;
   flex-direction: column;
   justify-content: space-around;
 }
 
 #waitingRoomPlayer1 ,#waitingRoomPlayer2{
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-    border: solid black 1px;
+  
+    background-color: rgb(57, 179, 132);;
+    border: solid #FFF 1px;
+    margin: 0 15%;
+    padding: 0.5%;
 }
 
 @keyframes slideOutLeft {
@@ -30,5 +33,68 @@ body {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+
+.loader{
+  margin:auto;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid black;
+}
+.loader-quart{
+  border-radius: 50px;
+  border: 6px solid rgb(97, 93, 93);
+}
+.loader-quart:after{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color:#FFF ;
+  animation: spin 1s linear 0s infinite;
+}
+#waitingRoomPlayer1{
+  display: flex;
+  flex-direction: row;
+}
+#waitingRoomPlayer2{
+  display: flex;
+  flex-direction: row;
+}
+#waitingRoomPseudoPlayer1{
+  margin: auto;
+}
+#waitingRoomPseudoPlayer2{
+  margin: auto;
+}
+#titre2{
+    text-align: center;
+    font-family: MyFont;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+}
+@keyframes spin{
+  0%{
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100%{
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

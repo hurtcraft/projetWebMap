@@ -13,7 +13,7 @@
     background: linear-gradient(300deg,#28a922,#1c3492);
     background-size: 120% 120%;
     animation: gradient-animation 5s ease infinite;
-
+    margin: auto;
     align-items: center ;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
 #titre{
     text-align: center;
     font-family: MyFont;
-    font-size: 150px;
+    font-size: 100px;
     color: white;
     letter-spacing: 2px;
     
@@ -111,7 +111,6 @@ input[name=pseudo]{
 #btnGuest,#btnCreationAcc{
     margin:0 2.5%
 }
-
 
 
 

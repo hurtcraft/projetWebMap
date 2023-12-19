@@ -74,6 +74,8 @@ btnCreateRoom.addEventListener("click",(e)=>{
         waitingRoom.style.display="flex";
         idRoomTitle.innerText="id de la salle : "+room.id;
         updateWaitingRoom(waitingRoomPseudoPlayer1,waitingRoomPseudoPlayer2,room);
+        
+        
     })
 })
 
